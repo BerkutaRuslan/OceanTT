@@ -14,7 +14,7 @@ class Category(models.Model):
 class Product(models.Model):
     name = models.CharField(max_length=125)
     is_deleted = models.BooleanField(default=False)
-    category = models.ManyToManyField(Category)
+    category = models.ManyToManyField(Category, related_name='products')
 
     def __str__(self):
         return self.name
