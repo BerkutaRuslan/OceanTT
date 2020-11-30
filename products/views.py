@@ -1,7 +1,7 @@
 from rest_framework import generics
 
 from products.models import Product
-from products.serializers import ProductSerializer, СategorySerializer
+from products.serializers import ProductSerializer, CategorySerializer
 
 
 class ProductCreate(generics.CreateAPIView):
@@ -10,5 +10,5 @@ class ProductCreate(generics.CreateAPIView):
 
 
 class CategoryCreate(generics.CreateAPIView):
-    serializer_class = СategorySerializer
+    serializer_class = CategorySerializer
     queryset = Product.objects.all()
