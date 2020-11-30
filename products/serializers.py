@@ -7,7 +7,7 @@ from products.models import Product, Category
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
-        fields = ['id', 'name', 'category']
+        fields = ['id', 'name', 'price', 'category', 'is_published']
 
     def validate(self, attrs):
         category = attrs.get('category')
